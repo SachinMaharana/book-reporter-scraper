@@ -1,60 +1,71 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 
 	"github.com/gocolly/colly"
 )
 
+//Book is a struct to hold book information..
 type Book struct {
-	Title  string `json:"title"`
-	Author string `json:"author"`
+	Title   string   `json:"title"`
+	Author  string   `json:"author"`
+	Genre   []string `json:"genres"`
+	Publish string   `json:"publish"`
 	// Promo  string `json:"promo"`
 }
 
 type books []Book
 
-// var r informations
-
 func main() {
 	c := colly.NewCollector()
 
 	books := books{}
-	// Find and visit all links
 	c.OnHTML(".views-row-unformatted", func(e *colly.HTMLElement) {
+		var genre []string
 		e.ForEach("div[class=book-info]", func(_ int, el *colly.HTMLElement) {
+			el.ForEach("span.genre", func(_ int, el *colly.HTMLElement) {
+				genre = append(genre, el.Text)
+			})
 			bI := el.DOM.Children()
+			title := bI.Eq(0).Text()
+			author := bI.Eq(1).Text()
+			publish := bI.Eq(3).Text()
+
 			book := Book{
-				Title: bI.Eq(0).Text(),
-				// Author: bI.Eq(1).Text(),
-				// Genre  :bI.Eq(2).Text(),
-				// Promo: bI.Eq(4).Text(),
+				Title:   title,
+				Author:  author,
+				Genre:   genre,
+				Publish: publish,
 			}
 			books = append(books, book)
 		})
-
 	})
 
 	c.OnHTML("li.pager-current + li > a[href]", func(e *colly.HTMLElement) {
-		log.Println("Next page link found:", e.Attr("href"))
+		log.Println("Next page link found:", e.Text)
 		link := "https://www.bookreporter.com" + e.Attr("href")
 		e.Request.Visit(link)
 	})
 
-	c.OnRequest(func(r *colly.Request) {
-		fmt.Println("Visiting", r.URL)
-		// fmt.Println(r.Body)
+	c.OnScraped(func(_ *colly.Response) {
+		log.Println("Scraping Done")
 	})
+
+	c.OnRequest(func(r *colly.Request) {
+		log.Println("Visiting", r.URL)
+	})
+
 	c.OnError(func(_ *colly.Response, err error) {
 		log.Println("Something went wrong:", err)
 	})
 	c.OnResponse(func(r *colly.Response) {
-		fmt.Println("Visited", r.Request.URL)
+		log.Println("Visited", r.Request.URL)
 	})
 
 	c.Visit("https://www.bookreporter.com/coming-soon")
-	fmt.Println(books)
-	// jsonStr, _ := json.Marshal(r)
-	// fmt.Println("Done", string(jsonStr))
+	jsonStr, _ := json.Marshal(books)
+	fmt.Println("Done", string(jsonStr))
 }
