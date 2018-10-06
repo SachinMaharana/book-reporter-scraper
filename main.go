@@ -1,22 +1,13 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/gocolly/colly"
 )
-
-//Book is a struct to hold book information..
-type Book struct {
-	Title   string   `json:"title"`
-	Author  string   `json:"author"`
-	Genre   []string `json:"genres"`
-	Publish string   `json:"publish"`
-}
-
-// books is a collection of Book Type
-type books []Book
 
 const (
 	// Site to be Scraped
@@ -35,6 +26,21 @@ const (
 	nextPageLink = "li.pager-current + li > a[href]"
 )
 
+//Book is a struct to hold book information..
+type Book struct {
+	Title   string   `json:"title"`
+	Author  string   `json:"author"`
+	Genre   []string `json:"genres"`
+	Publish string   `json:"publish"`
+}
+
+// books is a collection of Book Type
+type books []Book
+
+type callback *colly.HTMLCallback
+
+type data map[string]books
+
 //createCollectors return the colectors. Using Naked Return..
 func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
 	monthsCollector = colly.NewCollector()
@@ -42,13 +48,13 @@ func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
 	return
 }
 
-type callback *colly.HTMLCallback
-
 func main() {
 	books := books{}
+	// d := make(data)
 	monthsCollector, booksCollector := createCollectors()
 
 	monthsCallback := func(e *colly.HTMLElement) {
+		// d[e.ChildText("a")] = books{}
 		monthLink := e.ChildAttr("a", "href")
 		link := rootSiteLink + monthLink
 		fmt.Println("Link Found: ", link)
@@ -88,6 +94,7 @@ func main() {
 		nextPage.Request.Visit(link)
 	})
 
+	//events
 	booksCollector.OnRequest(func(r *colly.Request) {
 		log.Println("booksCollector : Visiting", r.URL)
 	})
@@ -114,4 +121,13 @@ func main() {
 	monthsCollector.Visit(comingSoonLink)
 	// jsonStr, _ := json.Marshal(books)
 	// fmt.Println("Done", string(jsonStr))
+	file, err := os.Create("result.json")
+	if err != nil {
+		log.Fatal("Cannot create file", err)
+	}
+	defer file.Close()
+	enc := json.NewEncoder(file)
+	enc.SetIndent("", "  ")
+
+	enc.Encode(books)
 }
