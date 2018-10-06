@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/gocolly/colly"
@@ -27,12 +28,14 @@ const (
 	nextPageLink = "li.pager-current + li > a[href]"
 
 	path = "result.json"
+
+	layout = "Jan 2, 2006 at 3:04pm (MST)"
 )
 
 type data struct {
-	LastUpdate string
-	Now        string
-	B          books
+	LastUpdated string `json:"lastUpdated"`
+	Now         string `json:"now"`
+	BooksData   books  `json:"booksData"`
 }
 
 //Book is a struct to hold book information..
@@ -98,6 +101,9 @@ func main() {
 
 	// visit next page to collect book
 	booksCollector.OnHTML(nextPageLink, func(nextPage *colly.HTMLElement) {
+		if i, err := strconv.Atoi(nextPage.Text); err == nil {
+			fmt.Println("Collected From Page: ", i-1)
+		}
 		log.Println("Next page link found:", nextPage.Text)
 		link := rootSiteLink + nextPage.Attr("href")
 		nextPage.Request.Visit(link)
@@ -105,15 +111,16 @@ func main() {
 
 	//events
 	booksCollector.OnRequest(func(r *colly.Request) {
-		log.Println("booksCollector : Visiting", r.URL)
+		log.Println("Visiting", r.URL)
 	})
 
 	booksCollector.OnResponse(func(r *colly.Response) {
-		log.Println("booksCollector : Visited", r.Request.URL)
+		log.Println("Visited", r.Request.URL)
 	})
 
 	booksCollector.OnError(func(_ *colly.Response, err error) {
 		log.Println("booksCollector : Something went wrong:", err)
+		os.Exit(0)
 	})
 
 	monthsCollector.OnRequest(func(r *colly.Request) {
@@ -121,64 +128,64 @@ func main() {
 	})
 
 	monthsCollector.OnError(func(_ *colly.Response, err error) {
-		log.Println("Something went wrong:", err)
+		log.Println("monthsCollector: Something went wrong:", err)
+		os.Exit(0)
 	})
 	monthsCollector.OnResponse(func(r *colly.Response) {
 		log.Println("Visited", r.Request.URL)
 	})
 
 	monthsCollector.Visit(comingSoonLink)
-
+	monthsCollector.Wait()
 	createDump(books)
 
 }
 
-func createDump(x books) {
+func createAndEncode(d data) {
+	f, err := os.Create(path)
+	if err != nil {
+		fmt.Println("Error Creating File")
+		os.Exit(0)
+	}
+	encoder := json.NewEncoder(f)
+	encoder.SetIndent("", "  ")
+	encoder.Encode(d)
+	defer f.Close()
+}
+
+func updateData(b books) data {
+	file, _ := os.Open(path)
+	defer file.Close()
+	decoder := json.NewDecoder(file)
+	data := data{}
+	err := decoder.Decode(&data)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(0)
+	}
+	now := time.Now().UTC().Format(layout)
+	data.LastUpdated, data.Now = data.Now, now
+	data.BooksData = b
+	return data
+}
+
+func createDump(b books) {
+	//check if file exist
 	_, err := os.Stat(path)
 
 	if !os.IsNotExist(err) {
 		fmt.Println("Exist")
-		file, _ := os.Open(path)
-		decoder := json.NewDecoder(file)
-		data := data{}
-		err := decoder.Decode(&data)
-		if err != nil {
-			fmt.Println(err)
-		}
-		now := time.Now().UTC().Format("Jan 2, 2006 at 3:04pm (MST)")
-		data.LastUpdate, data.Now = data.Now, now
-		f, err := os.Create(path)
-		enc := json.NewEncoder(f)
-		enc.SetIndent("", "  ")
-		enc.Encode(data)
-		defer file.Close()
-	}
-
-	if os.IsNotExist(err) {
-		fmt.Println("not exist")
-		var file, err = os.Create(path)
-		fmt.Println("file")
-		if err != nil {
-			fmt.Println("Error Creating File")
-			os.Exit(0)
-		}
-		d := data{
-			LastUpdate: time.Now().UTC().Format("Jan 2, 2006 at 3:04pm (MST)"),
-			Now:        time.Now().UTC().Format("Jan 2, 2006 at 3:04pm (MST)"),
-			B:          x,
+		updatedData := updateData(b)
+		createAndEncode(updatedData)
+	} else {
+		// file not exist
+		newData := data{
+			LastUpdated: time.Now().UTC().Format(layout),
+			Now:         time.Now().UTC().Format(layout),
+			BooksData:   b,
 		}
 		fmt.Println("Done Creating file", path)
-		enc := json.NewEncoder(file)
-		enc.SetIndent("", "  ")
-		enc.Encode(d)
-		defer file.Close()
+		createAndEncode(newData)
 	}
-}
 
-func isError(err error) {
-	fmt.Println(err)
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-	os.Exit(0)
 }
