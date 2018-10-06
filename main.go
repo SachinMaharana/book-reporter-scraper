@@ -13,75 +13,105 @@ type Book struct {
 	Author  string   `json:"author"`
 	Genre   []string `json:"genres"`
 	Publish string   `json:"publish"`
-	// Promo  string `json:"promo"`
 }
 
+// books is a collection of Book Type
 type books []Book
 
+const (
+	// Site to be Scraped
+	rootSiteLink = "https://www.bookreporter.com"
+
+	comingSoonLink = rootSiteLink + "/coming-soon"
+
+	monthsSelector = "#sidebar-last > div:nth-child(1) > div > div > div > div > div > ul li"
+
+	bookInfoSelector = "div[class=book-info]"
+
+	eachBookSelector = ".views-row-unformatted"
+
+	genreSelector = "span.genre"
+
+	nextPageLink = "li.pager-current + li > a[href]"
+)
+
+//createCollectors return the colectors. Using Naked Return..
+func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
+	monthsCollector = colly.NewCollector()
+	booksCollector = colly.NewCollector()
+	return
+}
+
+type callback *colly.HTMLCallback
+
 func main() {
-	c := colly.NewCollector()
-	d := colly.NewCollector()
-	// .archive-year > .expanded
+	books := books{}
+	monthsCollector, booksCollector := createCollectors()
 
-	c.OnHTML("#sidebar-last > div:nth-child(1) > div > div > div > div > div > ul li", func(e *colly.HTMLElement) {
-		fmt.Println(e.ChildText("a"))
-		link := "https://www.bookreporter.com" + e.ChildAttr("a", "href")
-		fmt.Println(link)
-		d.Visit(link)
+	monthsCallback := func(e *colly.HTMLElement) {
+		monthLink := e.ChildAttr("a", "href")
+		link := rootSiteLink + monthLink
+		fmt.Println("Link Found: ", link)
+		// visit that month and collect books info
+		booksCollector.Visit(link)
+	}
 
+	// visit months avaiable
+	monthsCollector.OnHTML(monthsSelector, monthsCallback)
+
+	// bookCallback is called each time book selector is found
+	bookCallback := func(e *colly.HTMLElement) {
+		var genre []string
+		e.ForEach(bookInfoSelector, func(_ int, el *colly.HTMLElement) {
+			el.ForEach(genreSelector, func(_ int, el *colly.HTMLElement) {
+				genre = append(genre, el.Text)
+			})
+			child := el.DOM.Children()
+
+			book := Book{
+				Title:   child.Eq(0).Text(),
+				Author:  child.Eq(1).Text(),
+				Genre:   genre,
+				Publish: child.Eq(3).Text(),
+			}
+			books = append(books, book)
+		})
+	}
+
+	// collect book from each page
+	booksCollector.OnHTML(eachBookSelector, bookCallback)
+
+	// visit next page to collect book
+	booksCollector.OnHTML(nextPageLink, func(nextPage *colly.HTMLElement) {
+		log.Println("Next page link found:", nextPage.Text)
+		link := rootSiteLink + nextPage.Attr("href")
+		nextPage.Request.Visit(link)
 	})
 
-	// books := books{}
-	d.OnHTML(".views-row-unformatted", func(e *colly.HTMLElement) {
-		fmt.Println("Inside d.Html")
-		// var genre []string
-		// e.ForEach("div[class=book-info]", func(_ int, el *colly.HTMLElement) {
-		// 	el.ForEach("span.genre", func(_ int, el *colly.HTMLElement) {
-		// 		genre = append(genre, el.Text)
-		// 	})
-		// 	bI := el.DOM.Children()
-		// 	title := bI.Eq(0).Text()
-		// 	author := bI.Eq(1).Text()
-		// 	publish := bI.Eq(3).Text()
-
-		// 	book := Book{
-		// 		Title:   title,
-		// 		Author:  author,
-		// 		Genre:   genre,
-		// 		Publish: publish,
-		// 	}
-		// 	books = append(books, book)
-		// })
+	booksCollector.OnRequest(func(r *colly.Request) {
+		log.Println("booksCollector : Visiting", r.URL)
 	})
 
-	d.OnHTML("li.pager-current + li > a[href]", func(e *colly.HTMLElement) {
-		log.Println("Next page link found:", e.Text)
-		link := "https://www.bookreporter.com" + e.Attr("href")
-		e.Request.Visit(link)
+	booksCollector.OnResponse(func(r *colly.Response) {
+		log.Println("booksCollector : Visited", r.Request.URL)
 	})
 
-	c.OnScraped(func(_ *colly.Response) {
-		log.Println("Scraping Done")
+	booksCollector.OnError(func(_ *colly.Response, err error) {
+		log.Println("booksCollector : Something went wrong:", err)
 	})
 
-	c.OnRequest(func(r *colly.Request) {
+	monthsCollector.OnRequest(func(r *colly.Request) {
 		log.Println("Visiting", r.URL)
 	})
-	d.OnRequest(func(r *colly.Request) {
-		log.Println("Visiting", r.URL)
-	})
 
-	c.OnError(func(_ *colly.Response, err error) {
+	monthsCollector.OnError(func(_ *colly.Response, err error) {
 		log.Println("Something went wrong:", err)
 	})
-	c.OnResponse(func(r *colly.Response) {
-		log.Println("Visited", r.Request.URL)
-	})
-	d.OnResponse(func(r *colly.Response) {
+	monthsCollector.OnResponse(func(r *colly.Response) {
 		log.Println("Visited", r.Request.URL)
 	})
 
-	c.Visit("https://www.bookreporter.com/coming-soon")
+	monthsCollector.Visit(comingSoonLink)
 	// jsonStr, _ := json.Marshal(books)
 	// fmt.Println("Done", string(jsonStr))
 }
