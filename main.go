@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/gocolly/colly"
 )
@@ -24,7 +25,15 @@ const (
 	genreSelector = "span.genre"
 
 	nextPageLink = "li.pager-current + li > a[href]"
+
+	path = "result.json"
 )
+
+type data struct {
+	LastUpdate string
+	Now        string
+	B          books
+}
 
 //Book is a struct to hold book information..
 type Book struct {
@@ -39,7 +48,7 @@ type books []Book
 
 type callback *colly.HTMLCallback
 
-type data map[string]books
+// type data map[string]books
 
 //createCollectors return the colectors. Using Naked Return..
 func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
@@ -119,15 +128,57 @@ func main() {
 	})
 
 	monthsCollector.Visit(comingSoonLink)
-	// jsonStr, _ := json.Marshal(books)
-	// fmt.Println("Done", string(jsonStr))
-	file, err := os.Create("result.json")
-	if err != nil {
-		log.Fatal("Cannot create file", err)
-	}
-	defer file.Close()
-	enc := json.NewEncoder(file)
-	enc.SetIndent("", "  ")
 
-	enc.Encode(books)
+	createDump(books)
+
+}
+
+func createDump(x books) {
+	_, err := os.Stat(path)
+
+	if !os.IsNotExist(err) {
+		fmt.Println("Exist")
+		file, _ := os.Open(path)
+		decoder := json.NewDecoder(file)
+		data := data{}
+		err := decoder.Decode(&data)
+		if err != nil {
+			fmt.Println(err)
+		}
+		now := time.Now().UTC().Format("Jan 2, 2006 at 3:04pm (MST)")
+		data.LastUpdate, data.Now = data.Now, now
+		f, err := os.Create(path)
+		enc := json.NewEncoder(f)
+		enc.SetIndent("", "  ")
+		enc.Encode(data)
+		defer file.Close()
+	}
+
+	if os.IsNotExist(err) {
+		fmt.Println("not exist")
+		var file, err = os.Create(path)
+		fmt.Println("file")
+		if err != nil {
+			fmt.Println("Error Creating File")
+			os.Exit(0)
+		}
+		d := data{
+			LastUpdate: time.Now().UTC().Format("Jan 2, 2006 at 3:04pm (MST)"),
+			Now:        time.Now().UTC().Format("Jan 2, 2006 at 3:04pm (MST)"),
+			B:          x,
+		}
+		fmt.Println("Done Creating file", path)
+		enc := json.NewEncoder(file)
+		enc.SetIndent("", "  ")
+		enc.Encode(d)
+		defer file.Close()
+	}
+}
+
+func isError(err error) {
+	fmt.Println(err)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	os.Exit(0)
 }
