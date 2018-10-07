@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/gocolly/colly"
@@ -40,10 +41,14 @@ type data struct {
 
 //Book is a struct to hold book information..
 type Book struct {
-	Title   string   `json:"title"`
-	Author  string   `json:"author"`
-	Genre   []string `json:"genres"`
-	Publish string   `json:"publish"`
+	Title     string   `json:"title"`
+	Author    string   `json:"author"`
+	Genre     []string `json:"genres"`
+	Publisher string   `json:"publisher"`
+	ISBN      string   `json:"isbn"`
+	Date      string   `json:"date"`
+	Month     string   `json:"month"`
+	Year      int      `json:"year"`
 }
 
 // books is a collection of Book Type
@@ -58,6 +63,50 @@ func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
 	monthsCollector = colly.NewCollector()
 	booksCollector = colly.NewCollector()
 	return
+}
+
+func trimSpaces(w string) string {
+	return strings.TrimSpace(w)
+}
+
+func replace(word, replace string) string {
+	return strings.Replace(word, replace, "", -1)
+}
+
+func parseDate(s string) time.Time {
+	var d time.Time
+	var e error
+	d, e = time.Parse("January 02, 2006", s)
+	if e != nil {
+		fmt.Println("Error Parsing Date.Trying Other Layout.")
+	}
+	d, e = time.Parse("January 2, 2006", s)
+	if e != nil {
+		fmt.Println("Error Parsing Date.")
+	}
+	return d
+}
+
+func parsePublish(s string) (string, string, string, string, int) {
+	var publisher, isbn, date string
+	var month string
+	var year int
+	slices := strings.Split(s, "|")
+	if len(slices) == 3 {
+		publisher = slices[0]
+		isbn = slices[1]
+		dateString := slices[2]
+		dateString = trimSpaces(dateString)
+		dateString = replace(dateString, "Published")
+		date = trimSpaces(dateString)
+		parsedDate := parseDate(date)
+		month = parsedDate.Month().String()
+		year = parsedDate.Year()
+		return publisher, isbn, date, month, year
+	}
+	fmt.Println("Length is not 3")
+	// if len(slices[0] != )
+	return publisher, isbn, date, month, year
 }
 
 func main() {
@@ -86,11 +135,19 @@ func main() {
 			})
 			child := el.DOM.Children()
 
+			publishedDate := child.Eq(3).Text()
+			publisher, isbn, date, month, year := parsePublish(publishedDate)
+			fmt.Println(month)
+
 			book := Book{
-				Title:   child.Eq(0).Text(),
-				Author:  child.Eq(1).Text(),
-				Genre:   genre,
-				Publish: child.Eq(3).Text(),
+				Title:     child.Eq(0).Text(),
+				Author:    child.Eq(1).Text(),
+				Genre:     genre,
+				Publisher: publisher,
+				ISBN:      isbn,
+				Date:      date,
+				Month:     month,
+				Year:      year,
 			}
 			books = append(books, book)
 		})
@@ -141,34 +198,6 @@ func main() {
 
 }
 
-func createAndEncode(d data) {
-	f, err := os.Create(path)
-	if err != nil {
-		fmt.Println("Error Creating File")
-		os.Exit(0)
-	}
-	encoder := json.NewEncoder(f)
-	encoder.SetIndent("", "  ")
-	encoder.Encode(d)
-	defer f.Close()
-}
-
-func updateData(b books) data {
-	file, _ := os.Open(path)
-	defer file.Close()
-	decoder := json.NewDecoder(file)
-	data := data{}
-	err := decoder.Decode(&data)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(0)
-	}
-	now := time.Now().UTC().Format(layout)
-	data.LastUpdated, data.Now = data.Now, now
-	data.BooksData = b
-	return data
-}
-
 func createDump(b books) {
 	//check if file exist
 	_, err := os.Stat(path)
@@ -188,4 +217,36 @@ func createDump(b books) {
 		createAndEncode(newData)
 	}
 
+}
+
+func updateData(b books) data {
+	file, _ := os.Open(path)
+	defer file.Close()
+	decoder := json.NewDecoder(file)
+	data := data{}
+	err := decoder.Decode(&data)
+	if err != nil {
+		fmt.Println("Decoding in UpdateData", err)
+		os.Exit(0)
+	}
+	now := time.Now().UTC().Format(layout)
+	data.LastUpdated, data.Now = data.Now, now
+	data.BooksData = b
+	return data
+}
+
+func createAndEncode(d data) {
+	f, err := os.Create(path)
+	if err != nil {
+		fmt.Println("Error Creating File")
+		os.Exit(0)
+	}
+	encoder := json.NewEncoder(f)
+	encoder.SetIndent("", "  ")
+	err = encoder.Encode(d)
+	if err != nil {
+		fmt.Println("Encoding in createAndEncode")
+		os.Exit(0)
+	}
+	defer f.Close()
 }
