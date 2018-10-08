@@ -220,7 +220,7 @@ func updateData(b books) data {
 	data := data{}
 	err := decoder.Decode(&data)
 	if err != nil {
-		fmt.Println("Decoding in UpdateData", err)
+		fmt.Println("Error: Decoding in UpdateData", err)
 		os.Exit(0)
 	}
 	now := time.Now().UTC().Format(layout)
@@ -239,7 +239,7 @@ func createAndEncode(d data) {
 	encoder.SetIndent("", "  ")
 	err = encoder.Encode(d)
 	if err != nil {
-		fmt.Println("Encoding in createAndEncode")
+		fmt.Println("Error: Encoding in createAndEncode", err)
 		os.Exit(0)
 	}
 	defer f.Close()
