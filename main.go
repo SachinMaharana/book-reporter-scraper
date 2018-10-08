@@ -103,13 +103,11 @@ func parsePublish(s string) (string, string, string, string, int) {
 		return publisher, isbn, date, month, year
 	}
 	fmt.Println("Length is not 3")
-	// if len(slices[0] != )
 	return publisher, isbn, date, month, year
 }
 
 func main() {
 	books := books{}
-	// d := make(data)
 	monthsCollector, booksCollector := createCollectors()
 
 	monthsCallback := func(e *colly.HTMLElement) {
