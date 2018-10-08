@@ -132,8 +132,7 @@ func main() {
 
 			publishedDate := child.Eq(3).Text()
 			publisher, isbn, date, month, year := parsePublish(publishedDate)
-			fmt.Println(month)
-
+			
 			book := Book{
 				Title:     child.Eq(0).Text(),
 				Author:    child.Eq(1).Text(),
