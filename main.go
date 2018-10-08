@@ -56,8 +56,6 @@ type books []Book
 
 type callback *colly.HTMLCallback
 
-// type data map[string]books
-
 //createCollectors return the colectors. Using Naked Return..
 func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
 	monthsCollector = colly.NewCollector()
@@ -115,7 +113,6 @@ func main() {
 	monthsCollector, booksCollector := createCollectors()
 
 	monthsCallback := func(e *colly.HTMLElement) {
-		// d[e.ChildText("a")] = books{}
 		monthLink := e.ChildAttr("a", "href")
 		link := rootSiteLink + monthLink
 		fmt.Println("Link Found: ", link)
