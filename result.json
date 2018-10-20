@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "Oct 7, 2018 at 5:15am (UTC)",
-  "now": "Oct 7, 2018 at 5:16am (UTC)",
+  "lastUpdated": "Oct 7, 2018 at 5:16am (UTC)",
+  "now": "Oct 19, 2018 at 3:45am (UTC)",
   "booksData": [
     {
       "title": "The Ragged Edge of Night",
@@ -54,7 +54,7 @@
       "title": "Alaskan Holiday",
       "author": "by Debbie Macomber",
       "genres": [
-        "Contemporary Fiction, Fiction, Romance, Women's Fiction"
+        "Fiction, Romance, Women's Fiction"
       ],
       "publisher": "Ballantine Books ",
       "isbn": " 9780399181283 ",
@@ -82,6 +82,18 @@
       ],
       "publisher": "Saga Press ",
       "isbn": " 9781481494922 ",
+      "date": "October 2, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "Anne Frank's Diary: The Graphic Adaptation",
+      "author": "Adapted by Ari Folman from Anne Frank with illustrations by David Polonsky",
+      "genres": [
+        "Autobiography, Graphic Novel, History, Holocaust, Nonfiction, Young Adult 13+"
+      ],
+      "publisher": "Pantheon ",
+      "isbn": " 9781101871799 ",
       "date": "October 2, 2018",
       "month": "October",
       "year": 2018
@@ -138,7 +150,7 @@
       "title": "Devil's Day",
       "author": "by Andrew Michael Hurley",
       "genres": [
-        "Contemporary Fiction, Fiction, Gothic, Horror"
+        "Fiction, Gothic, Horror, Suspense, Thriller"
       ],
       "publisher": "Houghton Mifflin Harcourt ",
       "isbn": " 9781328489883 ",
@@ -148,12 +160,24 @@
     },
     {
       "title": "Dracul",
-      "author": "written by Dacre Stoker, translated by J. D. Barker",
+      "author": "by Dacre Stoker and J. D. Barker",
       "genres": [
-        "Fiction, Horror, Suspense, Thriller"
+        "Fiction, Gothic, Horror, Supernatural Thriller, Suspense, Thriller"
       ],
       "publisher": "G.P. Putnam's Sons ",
       "isbn": " 9780735219342 ",
+      "date": "October 2, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "Dry",
+      "author": "by Neal Shusterman and Jarrod Shusterman",
+      "genres": [
+        "Adventure, Environment, Family, Fiction, Social Issues, Young Adult 13+"
+      ],
+      "publisher": "Simon \u0026 Schuster Books for Young Readers ",
+      "isbn": " 9781481481960 ",
       "date": "October 2, 2018",
       "month": "October",
       "year": 2018
@@ -366,10 +390,10 @@
       "title": "Bridge of Clay",
       "author": "by Markus Zusak",
       "genres": [
-        "Fiction, Young Adult 14+"
+        "Fiction"
       ],
       "publisher": "Knopf Books for Young Readers ",
-      "isbn": " 9780375845598 ",
+      "isbn": " 9781984830159 ",
       "date": "October 9, 2018",
       "month": "October",
       "year": 2018
@@ -378,7 +402,7 @@
       "title": "Bright Ruin",
       "author": "by Vic James",
       "genres": [
-        "Dystopian, Dystopian Fiction, Fantasy, Fiction"
+        "Dystopian, Fantasy, Fiction"
       ],
       "publisher": "Del Rey ",
       "isbn": " 9780425284186 ",
@@ -394,6 +418,18 @@
       ],
       "publisher": "G.P. Putnam's Sons ",
       "isbn": " 9780525536765 ",
+      "date": "October 9, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "Dear Evan Hansen",
+      "author": "by Val Emmich, with Steven Levenson, Benj Pasek and Justin Paul ",
+      "genres": [
+        "Contemporary Fiction, Fiction, Mental Health, Young Adult 13+"
+      ],
+      "publisher": "Poppy ",
+      "isbn": " 9780316420235 ",
       "date": "October 9, 2018",
       "month": "October",
       "year": 2018
@@ -426,7 +462,7 @@
       "title": "Invisible: The Forgotten Story of the Black Woman Lawyer Who Took Down America's Most Powerful Mobster",
       "author": "by Stephen L. Carter",
       "genres": [
-        "Biography, Nonfiction, Social Sciences"
+        "Biography, History, Nonfiction"
       ],
       "publisher": "Henry Holt and Co. ",
       "isbn": " 9781250121974 ",
@@ -483,13 +519,13 @@
       "year": 2018
     },
     {
-      "title": "Open Your Eyes",
-      "author": "by Paula Daly",
+      "title": "Presidents of War: The Epic Story, from 1807 to Modern Times",
+      "author": "by Michael Beschloss",
       "genres": [
-        "Fiction, Psychological Thriller, Thriller"
+        "History, Military, Nonfiction"
       ],
-      "publisher": "Grove Press ",
-      "isbn": " 9780802128454 ",
+      "publisher": "Crown ",
+      "isbn": " 9780307409607 ",
       "date": "October 9, 2018",
       "month": "October",
       "year": 2018
@@ -507,14 +543,74 @@
       "year": 2018
     },
     {
-      "title": "Presidents of War: The Epic Story, from 1807 to Modern Times",
-      "author": "by Michael Beschloss",
+      "title": "Open Your Eyes",
+      "author": "by Paula Daly",
       "genres": [
-        "History, Military, Nonfiction"
+        "Fiction, Psychological Thriller, Thriller"
       ],
-      "publisher": "Crown ",
-      "isbn": " 9780307409607 ",
+      "publisher": "Grove Press ",
+      "isbn": " 9780802128454 ",
       "date": "October 9, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "Dry (Audiobook)",
+      "author": "written by Neal Shusterman and Jarrod Shusterman; read by Jenni Barber, Michael Crouch, Kivlighan De Montebello, Noah Galvin, Candace Thaxton and the authors",
+      "genres": [
+        "Adventure, Fiction"
+      ],
+      "publisher": "Simon \u0026 Schuster Audio ",
+      "isbn": " 9781508263081 ",
+      "date": "October 2, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "The Next Person You Meet in Heaven (Audiobook)",
+      "author": "written and read by Mitch Albom",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "HarperAudio ",
+      "isbn": " 9780062866677 ",
+      "date": "October 9, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "Bridge of Clay (Audiobook)",
+      "author": "written and read by Markus Zusak",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "Listening Library ",
+      "isbn": " 9780307711076 ",
+      "date": "October 16, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "Unsheltered (Audiobook)",
+      "author": "written and read by Barbara Kingsolver",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "HarperAudio ",
+      "isbn": " 9780062865663 ",
+      "date": "October 16, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "A Well-Behaved Woman: A Novel of the Vanderbilts (Audiobook)",
+      "author": "written by Therese Anne Fowler, read by Barrie Kreinik",
+      "genres": [
+        "Fiction, Historical Fiction, Women's Fiction"
+      ],
+      "publisher": "Macmillan Audio ",
+      "isbn": " 9781427299208 ",
+      "date": "October 16, 2018",
       "month": "October",
       "year": 2018
     },
@@ -534,7 +630,7 @@
       "title": "The Clockmaker's Daughter",
       "author": "by Kate Morton",
       "genres": [
-        "Fiction"
+        "Fiction, Historical Fiction"
       ],
       "publisher": "Atria Books ",
       "isbn": " 9781451649390 ",
@@ -687,7 +783,7 @@
       "year": 2018
     },
     {
-      "title": "Desperate Measures",
+      "title": "Desperate Measures: A Stone Barrington Novel",
       "author": "by Stuart Woods",
       "genres": [
         "Adventure, Fiction"
@@ -723,12 +819,12 @@
       "year": 2018
     },
     {
-      "title": "In The House in the Dark of the Woods",
+      "title": "In the House in the Dark of the Woods",
       "author": "by Laird Hunt",
       "genres": [
-        "Fiction, History, Horror"
+        "Fiction, Historical Fiction, Horror"
       ],
-      "publisher": "Little Brown \u0026 Co ",
+      "publisher": "Little, Brown and Company ",
       "isbn": " 9780316411059 ",
       "date": "October 16, 2018",
       "month": "October",
@@ -747,18 +843,6 @@
       "year": 2018
     },
     {
-      "title": "Machine City: A Thriller ",
-      "author": "by Scott J. Holliday",
-      "genres": [
-        "Fiction, Mystery, Police Procedural, Suspense"
-      ],
-      "publisher": "Thomas \u0026 Mercer ",
-      "isbn": " 9781503903401 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
       "title": "Melmoth",
       "author": "by Sarah Perry",
       "genres": [
@@ -771,7 +855,7 @@
       "year": 2018
     },
     {
-      "title": "My Love Story: A Memoir",
+      "title": "My Love Story",
       "author": "by Tina Turner",
       "genres": [
         "Memoir, Nonfiction"
@@ -783,7 +867,7 @@
       "year": 2018
     },
     {
-      "title": "Nantucket Counterfeit: A Henry Kennis Mysteries",
+      "title": "Nantucket Counterfeit: A Henry Kennis Mystery",
       "author": "by Steven Axelrod",
       "genres": [
         "Crime, Fiction, Mystery, Police Procedural, Suspense, Thriller"
@@ -819,18 +903,6 @@
       "year": 2018
     },
     {
-      "title": "Residue: A Kevin Kerney Novel",
-      "author": "by Michael McGarrity",
-      "genres": [
-        "Fiction, Mystery, Police Procedural"
-      ],
-      "publisher": "W. W. Norton \u0026 Company ",
-      "isbn": " 9780393634358 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
       "title": "Ruth Bader Ginsburg: A Life ",
       "author": "by Jane Sherron de Hart",
       "genres": [
@@ -855,58 +927,10 @@
       "year": 2018
     },
     {
-      "title": "Dry (Audiobook)",
-      "author": "written by Neal Shusterman and Jarrod Shusterman; read by Jenni Barber, Michael Crouch, Kivlighan De Montebello, Noah Galvin, Candace Thaxton and the authors",
-      "genres": [
-        "Adventure, Fiction"
-      ],
-      "publisher": "Simon \u0026 Schuster Audio ",
-      "isbn": " 9781508263081 ",
-      "date": "October 2, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "The Next Person You Meet in Heaven (Audiobook)",
-      "author": "written and read by Mitch Albom",
-      "genres": [
-        "Fiction"
-      ],
-      "publisher": "HarperAudio ",
-      "isbn": " 9780062866677 ",
-      "date": "October 9, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "A Well-Behaved Woman: A Novel of the Vanderbilts (Audiobook)",
-      "author": "written by Therese Anne Fowler, read by Barrie Kreinik",
-      "genres": [
-        "Fiction, Historical Fiction, Women's Fiction"
-      ],
-      "publisher": "Macmillan Audio ",
-      "isbn": " 9781427299208 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "Unsheltered (Audiobook)",
-      "author": "written and read by Barbara Kingsolver",
-      "genres": [
-        "Fiction"
-      ],
-      "publisher": "HarperAudio ",
-      "isbn": " 9780062865663 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
       "title": "The Big Fella: Babe Ruth and the World He Created",
       "author": "by Jane Leavy",
       "genres": [
-        "Biography, Sports"
+        "Biography, Nonfiction, Sports"
       ],
       "publisher": "Harper ",
       "isbn": " 9780062380227 ",
@@ -927,18 +951,6 @@
       "year": 2018
     },
     {
-      "title": "The Book of Magic: A Collection of Stories ",
-      "author": "written by George R. R. Martin, Scott Lynch, Elizabeth Bear, Garth Nix and edited by Gardner Dozois",
-      "genres": [
-        "Anthology, Collection, Fantasy, Fiction, Short Stories"
-      ],
-      "publisher": "Bantam ",
-      "isbn": " 9780399593789 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
       "title": "The Christmas Star",
       "author": "by Donna VanLiere",
       "genres": [
@@ -954,7 +966,7 @@
       "title": "The Collector's Apprentice",
       "author": "by B. A. Shapiro",
       "genres": [
-        "Fiction, Historical Fiction"
+        "Fiction, Historical Fiction, Historical Thriller, Suspense, Thriller"
       ],
       "publisher": "Algonquin Books ",
       "isbn": " 9781616203580 ",
@@ -987,37 +999,13 @@
       "year": 2018
     },
     {
-      "title": "The Darkness: A Thriller",
+      "title": "The Darkness",
       "author": "by Ragnar Jonasson",
       "genres": [
         "Fiction, Mystery"
       ],
       "publisher": "Minotaur Books ",
       "isbn": " 9781250171030 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "The Fox",
-      "author": "by Frederick Forsyth",
-      "genres": [
-        "Fiction, Suspense, Thriller"
-      ],
-      "publisher": "G.P. Putnam's Sons ",
-      "isbn": " 9780525538424 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "The Holdouts",
-      "author": "by James Tucker",
-      "genres": [
-        "Fiction, Suspense, Thriller"
-      ],
-      "publisher": "Thomas \u0026 Mercer ",
-      "isbn": " 9781503903982 ",
       "date": "October 16, 2018",
       "month": "October",
       "year": 2018
@@ -1050,22 +1038,10 @@
       "title": "The Winters",
       "author": "by Lisa Gabriele",
       "genres": [
-        "Fiction, Women's Fiction"
+        "Fiction, Suspense, Thriller, Women's Fiction"
       ],
       "publisher": "Viking ",
       "isbn": " 9780525559702 ",
-      "date": "October 16, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "Townies: And Other Stories of Southern Mischief",
-      "author": "by Eryk Pruitt",
-      "genres": [
-        "Fiction, Mystery, Short Stories, Suspense, Thriller"
-      ],
-      "publisher": "Polis Books ",
-      "isbn": " 9781947993358 ",
       "date": "October 16, 2018",
       "month": "October",
       "year": 2018
@@ -1119,18 +1095,6 @@
       "year": 2018
     },
     {
-      "title": "All the Way: Football, Fame, and Redemption",
-      "author": "by Joe Namath and Don Yaeger",
-      "genres": [
-        "Autobiography, Biography, Entertainment, Nonfiction, Sports"
-      ],
-      "publisher": "Little Brown and Company ",
-      "isbn": " 9780316421102 ",
-      "date": "October 23, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
       "title": "An Empire for Ravens: A John the Lord Chamberlain Mystery",
       "author": "by Eric Mayer and Mary Reed",
       "genres": [
@@ -1138,18 +1102,6 @@
       ],
       "publisher": "Poisoned Pen Press ",
       "isbn": " 9781464211102 ",
-      "date": "October 23, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "Charlie Company's Journey Home: The Forgotten Impact on the Wives of Vietnam Veterans",
-      "author": "by Andrew Wiest",
-      "genres": [
-        "History, Military, Nonfiction"
-      ],
-      "publisher": "Osprey Publishing ",
-      "isbn": " 9781472827494 ",
       "date": "October 23, 2018",
       "month": "October",
       "year": 2018
@@ -1186,18 +1138,6 @@
       ],
       "publisher": "G.P. Putnam's Sons ",
       "isbn": " 9780735212978 ",
-      "date": "October 23, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "Let it Bang: A Young Black Man's Reluctant Odyssey into Guns",
-      "author": "by RJ Young",
-      "genres": [
-        "Autobiography, Biography, Memoir, Nonfiction"
-      ],
-      "publisher": "Houghton Mifflin Harcourt ",
-      "isbn": " 9781328826336 ",
       "date": "October 23, 2018",
       "month": "October",
       "year": 2018
@@ -1251,25 +1191,25 @@
       "year": 2018
     },
     {
-      "title": "The Line",
+      "title": "The Fox",
+      "author": "by Frederick Forsyth",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "G.P. Putnam's Sons ",
+      "isbn": " 9780525538424 ",
+      "date": "October 23, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "The Line: A Sueño and Bascom Investigation Set in South Korea",
       "author": "by Martin Limon",
       "genres": [
         "Fiction, Military"
       ],
       "publisher": "Soho Press ",
       "isbn": " 9781616959661 ",
-      "date": "October 23, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "The Rain Watcher",
-      "author": "by Tatiana de Rosnay",
-      "genres": [
-        "Fiction, Literary"
-      ],
-      "publisher": "St. Martin's Press ",
-      "isbn": " 9781250200013 ",
       "date": "October 23, 2018",
       "month": "October",
       "year": 2018
@@ -1307,18 +1247,6 @@
       "publisher": "St. Martin's Press ",
       "isbn": " 9781250075871 ",
       "date": "October 23, 2018",
-      "month": "October",
-      "year": 2018
-    },
-    {
-      "title": "The Museum of Modern Love",
-      "author": "by Heather Rose",
-      "genres": [
-        "Fiction, Literary"
-      ],
-      "publisher": "Algonquin Books ",
-      "isbn": " 9781616208523 ",
-      "date": "October 24, 2018",
       "month": "October",
       "year": 2018
     },
@@ -1426,6 +1354,18 @@
       ],
       "publisher": "Little, Brown ",
       "isbn": " 9780316560436 ",
+      "date": "October 30, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
+      "title": "The Rain Watcher",
+      "author": "by Tatiana de Rosnay",
+      "genres": [
+        "Fiction, Literary"
+      ],
+      "publisher": "St. Martin's Press ",
+      "isbn": " 9781250200013 ",
       "date": "October 30, 2018",
       "month": "October",
       "year": 2018
@@ -1683,6 +1623,18 @@
       "year": 2018
     },
     {
+      "title": "The Spellbook of Katrina Van Tassel: A Story of Sleepy Hollow",
+      "author": "by Alyssa Palombo",
+      "genres": [
+        "Fairy Tale, Fantasy, Fiction, Historical Romance,  Love \u0026 Romance, Paranormal, Young Adult 16+"
+      ],
+      "publisher": "St. Martin's Griffin ",
+      "isbn": " 9781250127617 ",
+      "date": "October 2, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
       "title": "The Ways of Wolfe: A Border Noir",
       "author": "by James Carlos Blake",
       "genres": [
@@ -1818,7 +1770,7 @@
       "title": "Kick-Ass Kinda Girl: A Memoir of Life, Love, and Caregiving",
       "author": "by Kathi Koll",
       "genres": [
-        "Memoir, Nonfiction"
+        "Health, Inspirational, Memoir, Nonfiction, Women’s Issues"
       ],
       "publisher": "Ward Publishing ",
       "isbn": " 9781732364905 ",
@@ -1902,7 +1854,7 @@
       "title": "The Lighthouse Keeper's Daughter",
       "author": "by Hazel Gaynor",
       "genres": [
-        "Fiction, Historical Fiction"
+        "Fiction, Historical Fiction, Women's Fiction"
       ],
       "publisher": "William Morrow Paperbacks ",
       "isbn": " 9780062698629 ",
@@ -1938,7 +1890,7 @@
       "title": "White Dancing Elephants: Stories",
       "author": "by Chaya Bhuvaneswar",
       "genres": [
-        "Fiction, Short Stories"
+        "Fiction, Short Stories, Women’s Issues"
       ],
       "publisher": "Dzanc Books ",
       "isbn": " 9781945814617 ",
@@ -2127,10 +2079,22 @@
       "year": 2018
     },
     {
+      "title": "Townies: And Other Stories of Southern Mischief",
+      "author": "by Eryk Pruitt",
+      "genres": [
+        "Fiction, Mystery, Short Stories, Suspense, Thriller"
+      ],
+      "publisher": "Polis Books ",
+      "isbn": " 9781947993358 ",
+      "date": "October 16, 2018",
+      "month": "October",
+      "year": 2018
+    },
+    {
       "title": "You Were Always Mine",
       "author": "by Nicole Baart",
       "genres": [
-        "Fiction, Women's Fiction"
+        "Fiction, Mystery, Women's Fiction"
       ],
       "publisher": "Atria Books ",
       "isbn": " 9781501133626 ",
@@ -2982,7 +2946,7 @@
       "title": "The Kinship of Secrets",
       "author": "by Eugenia Kim",
       "genres": [
-        "Fiction"
+        "Fiction, Historical Fiction"
       ],
       "publisher": "Houghton Mifflin Harcourt ",
       "isbn": " 9781328987822 ",
@@ -3003,7 +2967,7 @@
       "year": 2018
     },
     {
-      "title": "The Splendor Before the Dark: A Novel of the Emperor Nero",
+      "title": "The Splendor Before the Dark: A Novel of the Emperor Nero ",
       "author": "by Margaret George",
       "genres": [
         "Fiction, Historical Fiction"
@@ -3015,7 +2979,7 @@
       "year": 2018
     },
     {
-      "title": "The Splendor Before the Dark: A Novel of the Emperor Nero ",
+      "title": "The Splendor Before the Dark: A Novel of the Emperor Nero",
       "author": "by Margaret George",
       "genres": [
         "Fiction, Historical Fiction"
@@ -3591,6 +3555,162 @@
       "year": 2018
     },
     {
+      "title": "Heart Spring Mountain",
+      "author": "by Robin MacArthur",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "Ecco ",
+      "isbn": " 9780062444431 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Montaigne in Barn Boots: An Amateur Ambles Through Philosophy",
+      "author": "by Michael Perry",
+      "genres": [
+        "Humor, Memoir, Nonfiction"
+      ],
+      "publisher": "Harper Perennial ",
+      "isbn": " 9780062230577 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Pen 33",
+      "author": "by Anders Roslund and Börge Hellström",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Quercus ",
+      "isbn": " 9781681440576 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Revolution Song: A Story of American Freedom",
+      "author": "by Russell Shorto",
+      "genres": [
+        "History, Nonfiction"
+      ],
+      "publisher": "W. W. Norton \u0026 Company ",
+      "isbn": " 9780393356212 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The 17th Suspect",
+      "author": "by James Patterson and Maxine Paetro",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Grand Central Publishing ",
+      "isbn": " 9781538760888 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Great Halifax Explosion: A World War I Story of Treachery, Tragedy, and Extraordinary Heroism",
+      "author": "by John U. Bacon",
+      "genres": [
+        "History, Nonfiction"
+      ],
+      "publisher": "William Morrow Paperbacks ",
+      "isbn": " 9780062666543 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The House of Impossible Beauties",
+      "author": "by Joseph Cassara",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "Ecco ",
+      "isbn": " 9780062676993 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Revolution of Marina M.",
+      "author": "by Janet Fitch",
+      "genres": [
+        "Fiction, Historical Fiction"
+      ],
+      "publisher": "Back Bay Books ",
+      "isbn": " 9780316022071 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Wife",
+      "author": "by Alafair Burke",
+      "genres": [
+        "Fiction, Psychological Suspense, Psychological Thriller, Suspense, Thriller"
+      ],
+      "publisher": "Harper Paperbacks ",
+      "isbn": " 9780062390523 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Then She Was Gone",
+      "author": "by Lisa Jewell",
+      "genres": [
+        "Fiction, Psychological Suspense, Psychological Thriller, Suspense, Thriller"
+      ],
+      "publisher": "Atria Books ",
+      "isbn": " 9781501154652 ",
+      "date": "November 6, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Chicago",
+      "author": "by David Mamet",
+      "genres": [
+        "Fiction, Historical Fiction, Historical Thriller, Suspense, Thriller"
+      ],
+      "publisher": "Custom House ",
+      "isbn": " 9780062797209 ",
+      "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Death in the Air: The True Story of a Serial Killer, the Great London Smog, and the Strangling of a City ",
+      "author": "by Kate Winkler Dawson",
+      "genres": [
+        "History, Nonfiction, True Crime"
+      ],
+      "publisher": "Hachette Books ",
+      "isbn": " 9780316506830 ",
+      "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "Future Home of the Living God",
+      "author": "by Louise Erdrich",
+      "genres": [
+        "Dystopian Fiction, Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Harper Perennial ",
+      "isbn": " 9780062694065 ",
+      "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
       "title": "Miss Bingley Requests",
       "author": "by Judy McCrosky",
       "genres": [
@@ -3599,6 +3719,114 @@
       "publisher": "Crooked Lane Books ",
       "isbn": " 9781786154750 ",
       "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Cutting Edge: A Lincoln Rhyme Novel",
+      "author": "by Jeffery Deaver",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Grand Central Publishing ",
+      "isbn": " 9781538731840 ",
+      "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Sixth Day: A Brit in the FBI Thriller",
+      "author": "by Catherine Coulter and J.T. Ellison",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Gallery Books ",
+      "isbn": " 9781501196386 ",
+      "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Smack",
+      "author": "by Richard Lange",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Mulholland Books ",
+      "isbn": " 9780316327619 ",
+      "date": "November 13, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "A Map of the Dark",
+      "author": "by Karen Ellis",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Mulholland Books ",
+      "isbn": " 9780316505680 ",
+      "date": "November 20, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Gate Keeper: An Inspector Ian Rutledge Mystery",
+      "author": "by Charles Todd",
+      "genres": [
+        "Fiction, Historical Fiction, Historical Mystery, Mystery"
+      ],
+      "publisher": "William Morrow Paperbacks ",
+      "isbn": " 9780062678720 ",
+      "date": "November 20, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Tangled Lands",
+      "author": "by Paolo Bacigalupi and Tobias S. Buckell",
+      "genres": [
+        "Dystopian, Fantasy, Fiction"
+      ],
+      "publisher": "Saga Press ",
+      "isbn": " 9781481497305 ",
+      "date": "November 20, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Way It Was: My Life with Frank Sinatra",
+      "author": "by Eliot Weisman and Jennifer Valoppi",
+      "genres": [
+        "Autobiography, Nonfiction"
+      ],
+      "publisher": "Hachette Books ",
+      "isbn": " 9780316470094 ",
+      "date": "November 20, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Affliction",
+      "author": "by Beth Gutcheon",
+      "genres": [
+        "Fiction, Mystery"
+      ],
+      "publisher": "William Morrow Paperbacks ",
+      "isbn": " 9780062432001 ",
+      "date": "November 27, 2018",
+      "month": "November",
+      "year": 2018
+    },
+    {
+      "title": "The Museum of Modern Love",
+      "author": "by Heather Rose",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "Algonquin Books ",
+      "isbn": " 9781616208523 ",
+      "date": "November 27, 2018",
       "month": "November",
       "year": 2018
     },
@@ -3615,13 +3843,73 @@
       "year": 2018
     },
     {
+      "title": "All That Heaven Allows: A Biography of Rock Hudson ",
+      "author": "by Mark Griffin",
+      "genres": [
+        "Biography, Nonfiction"
+      ],
+      "publisher": "Harper ",
+      "isbn": " 9780062408853 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Army of Empire: The Untold Story of the Indian Army in World War I",
+      "author": "by George Morton-Jack",
+      "genres": [
+        "History, Nonfiction"
+      ],
+      "publisher": "Basic Books ",
+      "isbn": " 9780465094042 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Hearts of the Missing",
+      "author": "by Carol Potenza",
+      "genres": [
+        "Fiction, Mystery"
+      ],
+      "publisher": "Minotaur Books ",
+      "isbn": " 9781250178282 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Into the Night ",
+      "author": "by Sarah Bailey",
+      "genres": [
+        "Fiction, Suspense, Thriller"
+      ],
+      "publisher": "Grand Central Publishing ",
+      "isbn": " 9781538759950 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
       "title": "Kitchen Yarns: Notes on Life, Love, and Food",
       "author": "by Ann Hood",
       "genres": [
-        "Autobiography, Cooking, Nonfiction, Women’s Issues"
+        "Cooking, Essays, Nonfiction"
       ],
       "publisher": "W. W. Norton \u0026 Company ",
       "isbn": " 9780393249507 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Murder at the Mill",
+      "author": "by Andrew Grant Shaw",
+      "genres": [
+        "Contemporary Fiction, Fiction, Mystery"
+      ],
+      "publisher": "Minotaur Books ",
+      "isbn": " 9781250189295 ",
       "date": "December 4, 2018",
       "month": "December",
       "year": 2018
@@ -3635,6 +3923,222 @@
       "publisher": "Gallery Books ",
       "isbn": " 9781982107215 ",
       "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Of Blood and Bone: Chronicles of the One, Book 2",
+      "author": "by Nora Roberts",
+      "genres": [
+        "Dystopian, Dystopian Fiction, Fantasy, Fiction, Science Fiction"
+      ],
+      "publisher": "St. Martin's Press ",
+      "isbn": " 9781250122995 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Of Blood and Bone: Chronicles of the One, Book 2",
+      "author": "by Nora Roberts",
+      "genres": [
+        "Dystopian, Dystopian Fiction, Fantasy, Fiction, Science Fiction"
+      ],
+      "publisher": "St. Martin's Press ",
+      "isbn": " 9781250122995 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Dakota Winters",
+      "author": "by Tom Barbash",
+      "genres": [
+        "Fiction, Historical Fiction"
+      ],
+      "publisher": "Ecco ",
+      "isbn": " 9780062258199 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Mansion",
+      "author": "by Ezekiel Boone",
+      "genres": [
+        "Fiction, Horror, Suspense"
+      ],
+      "publisher": "Atria/Emily Bestler Books ",
+      "isbn": " 9781501165504 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Songbird",
+      "author": "by Marcia Willett",
+      "genres": [
+        "Family, Fiction,  Love \u0026 Romance, Romance, Romantic Suspense"
+      ],
+      "publisher": "Thomas Dunne Books ",
+      "isbn": " 978-1250177414 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Three Secret Cities",
+      "author": "by Matthew Reilly",
+      "genres": [
+        "Adventure, Fiction"
+      ],
+      "publisher": "Gallery Books ",
+      "isbn": " 9781501167195 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Victory City: A History of New York and New Yorkers during World War II",
+      "author": "by John Strausbaugh",
+      "genres": [
+        "History, Nonfiction"
+      ],
+      "publisher": "Twelve ",
+      "isbn": " 9781455567485 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Broken Ground",
+      "author": "by Val McDermid",
+      "genres": [
+        "Crime, Fiction, Suspense"
+      ],
+      "publisher": "Atlantic Monthly Press ",
+      "isbn": " 9780802129123 ",
+      "date": "December 5, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Day the Sun Died",
+      "author": "written by Yan Lianke, translated by Carlos Rojas",
+      "genres": [
+        "Fiction, Literary Fiction"
+      ],
+      "publisher": "Grove Press ",
+      "isbn": " 9780802128539 ",
+      "date": "December 11, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "This Is Cuba: An American Journalist Under Castro's Shadow",
+      "author": "by David Ariosto",
+      "genres": [
+        "Nonfiction, Political Science, Political Thriller, Politics"
+      ],
+      "publisher": "St. Martin's Press ",
+      "isbn": " 9781250176974 ",
+      "date": "December 11, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "On the Same Page",
+      "author": "by N. D. Galland",
+      "genres": [
+        "Contemporary Fiction, Fiction, Women's Fiction"
+      ],
+      "publisher": "William Morrow Paperbacks ",
+      "isbn": " 9780062672858 ",
+      "date": "December 12, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Influenza: The Hundred Year Hunt to Cure the Deadliest Disease in History ",
+      "author": "by Jeremy Brown",
+      "genres": [
+        "Health, Nonfiction"
+      ],
+      "publisher": "Touchstone ",
+      "isbn": " 9781501181245 ",
+      "date": "December 18, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "In a House of Lies",
+      "author": "by Ian Rankin",
+      "genres": [
+        "Crime, Fiction, Suspense"
+      ],
+      "publisher": "Little, Brown and Company ",
+      "isbn": " 9780316479202 ",
+      "date": "December 31, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "My Favorite Half-Night Stand",
+      "author": "by Christina Lauren",
+      "genres": [
+        " Comedy, Fiction, Romance"
+      ],
+      "publisher": "Gallery Books ",
+      "isbn": " 9781501197406 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Accidental Beauty Queen",
+      "author": "by Teri Wilson",
+      "genres": [
+        "Contemporary Fiction, Fiction, Women's Fiction"
+      ],
+      "publisher": "Gallery Books ",
+      "isbn": " 9781501197604 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Surrogate",
+      "author": "by Louise Jensen",
+      "genres": [
+        "Contemporary Fiction, Fiction, Women's Fiction"
+      ],
+      "publisher": "Grand Central Publishing ",
+      "isbn": " 9781538730447 ",
+      "date": "December 4, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Milkman",
+      "author": "by Anna Burns",
+      "genres": [
+        "Fiction"
+      ],
+      "publisher": "Graywolf Press ",
+      "isbn": " 9781644450000 ",
+      "date": "December 11, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "Hunting Annabelle",
+      "author": "by Wendy Heard",
+      "genres": [
+        "Fiction, Psychological Suspense, Psychological Thriller, Suspense, Thriller"
+      ],
+      "publisher": "Mira ",
+      "isbn": " 9780778369349 ",
+      "date": "December 18, 2018",
       "month": "December",
       "year": 2018
     },
@@ -3663,7 +4167,31 @@
       "year": 2018
     },
     {
+      "title": "Half of What You Hear",
+      "author": "by Kristyn Kusek Lewis",
+      "genres": [
+        "Contemporary Fiction, Fiction, Women's Fiction"
+      ],
+      "publisher": "Harper Paperbacks ",
+      "isbn": " 9780062673350 ",
+      "date": "December 31, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
       "title": "The Gown",
+      "author": "by Jennifer Robson",
+      "genres": [
+        "Fiction, Historical Fiction"
+      ],
+      "publisher": "William Morrow Paperbacks ",
+      "isbn": " 9780062674951 ",
+      "date": "December 31, 2018",
+      "month": "December",
+      "year": 2018
+    },
+    {
+      "title": "The Gown: A Novel of the Royal Wedding ",
       "author": "by Jennifer Robson",
       "genres": [
         "Fiction, Historical Fiction"
