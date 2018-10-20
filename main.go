@@ -56,8 +56,6 @@ type books []Book
 
 type callback *colly.HTMLCallback
 
-// type data map[string]books
-
 //createCollectors return the colectors. Using Naked Return..
 func createCollectors() (monthsCollector, booksCollector *colly.Collector) {
 	monthsCollector = colly.NewCollector()
@@ -105,17 +103,14 @@ func parsePublish(s string) (string, string, string, string, int) {
 		return publisher, isbn, date, month, year
 	}
 	fmt.Println("Length is not 3")
-	// if len(slices[0] != )
 	return publisher, isbn, date, month, year
 }
 
 func main() {
 	books := books{}
-	// d := make(data)
 	monthsCollector, booksCollector := createCollectors()
 
 	monthsCallback := func(e *colly.HTMLElement) {
-		// d[e.ChildText("a")] = books{}
 		monthLink := e.ChildAttr("a", "href")
 		link := rootSiteLink + monthLink
 		fmt.Println("Link Found: ", link)
@@ -137,8 +132,7 @@ func main() {
 
 			publishedDate := child.Eq(3).Text()
 			publisher, isbn, date, month, year := parsePublish(publishedDate)
-			fmt.Println(month)
-
+			
 			book := Book{
 				Title:     child.Eq(0).Text(),
 				Author:    child.Eq(1).Text(),
@@ -226,7 +220,7 @@ func updateData(b books) data {
 	data := data{}
 	err := decoder.Decode(&data)
 	if err != nil {
-		fmt.Println("Decoding in UpdateData", err)
+		fmt.Println("Error: Decoding in UpdateData", err)
 		os.Exit(0)
 	}
 	now := time.Now().UTC().Format(layout)
@@ -245,7 +239,7 @@ func createAndEncode(d data) {
 	encoder.SetIndent("", "  ")
 	err = encoder.Encode(d)
 	if err != nil {
-		fmt.Println("Encoding in createAndEncode")
+		fmt.Println("Error: Encoding in createAndEncode", err)
 		os.Exit(0)
 	}
 	defer f.Close()
